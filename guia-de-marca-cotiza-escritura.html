@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Marca — Cotiza Escritura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23B8892B'/%3E%3Cpath d='M18 46 L50 20 L82 46' fill='none' stroke='%230E1512' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 46 L24 72' stroke='%230E1512' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M76 46 L76 72' stroke='%230E1512' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M24 72 C24 80 34 80 34 72 L66 72 C66 80 76 80 76 72' fill='none' stroke='%230E1512' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='36' y='46' width='12' height='12' rx='2.5' fill='%230E1512'/%3E%3Crect x='52' y='46' width='12' height='12' rx='2.5' fill='%230E1512'/%3E%3Crect x='36' y='62' width='12' height='12' rx='2.5' fill='%230E1512'/%3E%3Crect x='52' y='62' width='12' height='12' rx='2.5' fill='%230E1512'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink-950:#0E1512; --ink-900:#14201B; --ink-800:#1F2F27; --ink-700:#2C4238;
+  --paper-50:#FCF9F1; --paper-100:#F7F1E4; --paper-200:#EEE4CD;
+  --gold-400:#D8AE5E; --gold-500:#B8892B; --gold-600:#93691C;
+  --burgundy-500:#93413F; --burgundy-600:#7A2E2E; --sage-600:#4C7A5E;
+  --text-ink:#F3EFE3; --text-ink-muted:rgba(243,239,227,.62);
+  --text-paper:#221B10; --text-paper-muted:#6F6553;
+  --line-ink:rgba(243,239,227,.14); --line-paper:rgba(28,22,10,.14);
+  --serif:'Fraunces','Iowan Old Style',serif;
+  --sans:'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono','SFMono-Regular',monospace;
+  --radius-lg:20px; --radius-md:13px; --radius-sm:9px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);background:var(--paper-100);color:var(--text-paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;font-weight:700}
+.eyebrow::before{content:'';width:22px;height:1px;background:currentColor;opacity:.65}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+code{font-family:var(--mono);background:var(--paper-200);padding:2px 6px;border-radius:4px;font-size:12.5px}
+
+/* ---- MASTHEAD ---- */
+.masthead{background:radial-gradient(120% 140% at 18% 0%,var(--ink-800) 0%,var(--ink-900) 55%,var(--ink-950) 100%);color:var(--text-ink);padding:80px 28px 64px;text-align:center}
+.masthead .eyebrow{color:var(--gold-400);justify-content:center;margin-bottom:30px}
+.masthead .mark{width:104px;height:104px;color:var(--gold-400)}
+.masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,5vw,48px);margin:26px 0 10px;letter-spacing:-.3px}
+.masthead p{font-family:var(--serif);font-style:italic;color:var(--text-ink-muted);font-size:17px;max-width:44ch;margin:0 auto}
+.masthead .meta{margin-top:32px;font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--gold-400);opacity:.8}
+
+.band{height:56px;background:linear-gradient(180deg,var(--ink-950) 0%,var(--paper-100) 100%)}
+
+nav.toc{position:sticky;top:0;z-index:20;background:rgba(247,241,228,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-paper);padding:14px 28px;display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px;font-weight:600}
+nav.toc a{color:var(--text-paper-muted);text-decoration:none;transition:color .15s}
+nav.toc a:hover{color:var(--burgundy-600)}
+
+section.block{padding:64px 0;border-top:1px solid var(--line-paper)}
+section.block:first-of-type{border-top:none}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3vw,28px);margin:0 0 8px;letter-spacing:-.2px}
+.block > p.lede{color:var(--text-paper-muted);font-size:15px;max-width:64ch;margin:0 0 36px}
+h3.sub{font-family:var(--sans);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--burgundy-600);margin:0 0 16px}
+
+/* ---- LOGO ---- */
+.logo-showcase{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-bottom:44px}
+.logo-primary{background:var(--ink-900);border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 24px;color:var(--gold-400)}
+.logo-primary svg{width:120px;height:120px}
+.logo-primary .cap{font-family:var(--mono);font-size:11px;color:var(--text-ink-muted);margin-top:20px;letter-spacing:.5px}
+.logo-secondary{display:grid;grid-template-rows:1fr 1fr;gap:20px}
+.logo-secondary .cell{background:var(--paper-50);border:1px solid var(--line-paper);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;padding:24px}
+.logo-secondary svg{width:64px;height:64px;color:var(--ink-900)}
+
+.clearspace{background:var(--paper-50);border:1px dashed var(--line-paper);border-radius:var(--radius-lg);padding:40px;display:flex;align-items:center;justify-content:center;position:relative;margin-bottom:20px}
+.clearspace .grid{width:140px;height:140px;position:relative}
+.clearspace .grid svg{width:100%;height:100%;color:var(--ink-900)}
+.clearspace .grid::before,.clearspace .grid::after{content:'';position:absolute;border:1px dashed var(--burgundy-500);opacity:.5}
+.clearspace .grid::before{inset:-24px}
+.min-size-row{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap}
+.min-size-row .item{text-align:center}
+.min-size-row .item .px{font-family:var(--mono);font-size:10.5px;color:var(--text-paper-muted);margin-top:8px}
+.min-size-row svg{color:var(--ink-900)}
+
+.piece-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.piece{background:var(--paper-50);border:1px solid var(--line-paper);border-radius:var(--radius-md);padding:20px}
+.piece svg{width:32px;height:32px;color:var(--gold-600);margin-bottom:12px}
+.piece h4{font-family:var(--sans);font-weight:700;font-size:13.5px;margin:0 0 5px;text-transform:uppercase;letter-spacing:.4px}
+.piece p{font-size:13px;color:var(--text-paper-muted);margin:0}
+
+.dont-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.dont{background:var(--paper-50);border:1px solid var(--line-paper);border-radius:var(--radius-md);padding:18px;text-align:center}
+.dont svg{width:44px;height:44px;color:var(--ink-700);margin-bottom:10px}
+.dont .lbl{font-size:12px;color:var(--burgundy-600);font-weight:600}
+.dont.stretch svg{transform:scaleX(1.8)}
+.dont.tiny{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dont.tiny svg{width:14px;height:14px;margin-bottom:14px}
+.dont.busy{background:repeating-linear-gradient(45deg,var(--paper-200),var(--paper-200) 4px,var(--paper-50) 4px,var(--paper-50) 10px)}
+.dont.wrongcolor svg{color:#4C7AD8}
+
+/* ---- COLOR ---- */
+.swatch-group{margin-bottom:36px}
+.swatch-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:14px}
+.swatch{border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--line-paper)}
+.swatch .fill{height:74px}
+.swatch .info{background:var(--paper-50);padding:10px 12px}
+.swatch .name{font-size:12px;font-weight:700}
+.swatch .hex{font-family:var(--mono);font-size:11px;color:var(--text-paper-muted);margin-top:2px}
+
+/* ---- TYPE ---- */
+.type-row{padding:22px 0;border-top:1px solid var(--line-paper);display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:baseline}
+.type-row:first-child{border-top:none}
+.type-row .role{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text-paper-muted)}
+.type-row .role strong{display:block;font-family:var(--sans);font-size:13px;color:var(--text-paper);text-transform:none;letter-spacing:0;margin-bottom:4px}
+.specimen-serif{font-family:var(--serif);font-weight:700;font-size:34px;letter-spacing:-.3px}
+.specimen-serif em{color:var(--gold-600);font-style:italic;font-weight:500}
+.specimen-sans{font-family:var(--sans);font-size:16px}
+.specimen-mono{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
+.weights{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap}
+.weights span{font-family:var(--sans);font-size:13px;color:var(--text-paper-muted)}
+
+/* ---- VOICE ---- */
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.voice-card{border-radius:var(--radius-md);padding:20px 22px}
+.voice-card.yes{background:rgba(76,122,94,.1);border:1px solid rgba(76,122,94,.3)}
+.voice-card.no{background:rgba(147,65,63,.08);border:1px solid rgba(147,65,63,.25)}
+.voice-card h4{font-size:11px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;font-weight:700}
+.voice-card.yes h4{color:var(--sage-600)}
+.voice-card.no h4{color:var(--burgundy-600)}
+.voice-card ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--text-paper)}
+.voice-card li{margin-bottom:8px}
+.voice-card li:last-child{margin-bottom:0}
+
+/* ---- APPLIED ---- */
+.applied-nav{background:var(--ink-900);border-radius:var(--radius-lg);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.applied-brand{display:flex;align-items:center;gap:10px}
+.applied-mark{width:36px;height:36px;border-radius:9px;background:var(--gold-500);color:var(--ink-950);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.applied-mark svg{width:22px;height:22px}
+.applied-name{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--text-ink)}
+.applied-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-ink-muted);display:block;margin-top:1px}
+.applied-cta{font-size:13px;font-weight:600;padding:9px 18px;border-radius:999px;background:transparent;border:1px solid rgba(216,174,94,.5);color:var(--gold-400)}
+
+.applied-row{display:flex;gap:16px;flex-wrap:wrap}
+.applied-badge{display:flex;align-items:center;gap:10px;background:var(--paper-50);border:1px solid var(--line-paper);border-radius:999px;padding:10px 18px 10px 10px}
+.applied-badge .ic{width:30px;height:30px;border-radius:8px;background:var(--gold-500);color:var(--ink-950);display:flex;align-items:center;justify-content:center}
+.applied-badge .ic svg{width:17px;height:17px}
+.applied-badge span{font-size:13px;font-weight:600}
+
+.applied-wa{display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;border-radius:999px;padding:12px 18px;font-size:13.5px;font-weight:700}
+.applied-wa svg{width:18px;height:18px}
+
+footer{padding:44px 28px 64px;text-align:center;font-size:11.5px;color:var(--text-paper-muted)}
+
+@media (max-width:760px){
+  .logo-showcase{grid-template-columns:1fr}
+  .piece-grid{grid-template-columns:1fr}
+  .dont-grid{grid-template-columns:repeat(2,1fr)}
+  .voice-grid{grid-template-columns:1fr}
+  .type-row{grid-template-columns:1fr}
+  .applied-nav{flex-direction:column;gap:14px;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG del isotipo reutilizado via <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 100 100">
+    <path d="M18 46 L50 20 L82 46" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 46 L24 72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    <path d="M76 46 L76 72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    <path d="M24 72 C24 80 34 80 34 72 L66 72 C66 80 76 80 76 72" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="37" y="47" width="10" height="10" rx="2" fill="currentColor"/>
+    <rect x="52" y="47" width="10" height="10" rx="2" fill="currentColor"/>
+    <rect x="37" y="62" width="10" height="10" rx="2" fill="currentColor"/>
+    <rect x="52" y="62" width="10" height="10" rx="2" fill="currentColor"/>
+  </symbol>
+  <symbol id="ic-house" viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8a1 1 0 0 0 1 1h3v-5h4v5h3a1 1 0 0 0 1-1v-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.8c-1.9 0-3.6-.5-5.1-1.4l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 0 1-1.6-5.5C5.4 9.7 10.1 5 16 5s10.6 4.7 10.6 10.5S21.9 25.8 16 25.8zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-1.9-.9-3.1-1.7-4.4-3.8-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-1.3 1.4-1 3.4.3 5.1 1.8 2.4 3.1 3.7 5.9 4.9 1.9.8 2.6.7 3.5.6.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></symbol>
+</svg>
+
+<div class="masthead">
+  <span class="eyebrow">Guía de marca</span>
+  <svg class="mark"><use href="#mark"/></svg>
+  <h1>Cotiza Escritura</h1>
+  <p>Cotización de gastos de cierre en Jalisco — clara y al instante, no en tres días.</p>
+  <div class="meta">v1.0 · 2026</div>
+</div>
+
+<div class="band" aria-hidden="true"></div>
+
+<nav class="toc">
+  <a href="#logo">Logo</a>
+  <a href="#color">Color</a>
+  <a href="#tipografia">Tipografía</a>
+  <a href="#voz">Voz y tono</a>
+  <a href="#aplicado">Aplicado</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ============ LOGO ============ -->
+  <section class="block" id="logo">
+    <h2>El logo</h2>
+    <p class="lede">Un solo trazo continuo: el tejado de la casa se apoya en el teclado de la calculadora, y la base se enrolla como el pergamino de una escritura. No son tres iconos combinados — son tres lecturas del mismo contorno.</p>
+
+    <div class="logo-showcase">
+      <div class="logo-primary">
+        <svg><use href="#mark"/></svg>
+        <div class="cap">versión primaria · oro sobre tinta</div>
+      </div>
+      <div class="logo-secondary">
+        <div class="cell"><svg><use href="#mark"/></svg></div>
+        <div class="cell" style="background:var(--ink-950)"><svg style="color:var(--text-ink)"><use href="#mark"/></svg></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Las tres piezas</h3>
+    <div class="piece-grid">
+      <div class="piece">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 46 L50 20 L82 46"/><path d="M24 46 L24 72"/><path d="M76 46 L76 72"/></svg>
+        <h4>Casa</h4>
+        <p>El inmueble — el tema de toda cotización.</p>
+      </div>
+      <div class="piece">
+        <svg viewBox="0 0 100 100" fill="currentColor"><rect x="30" y="30" width="16" height="16" rx="3"/><rect x="54" y="30" width="16" height="16" rx="3"/><rect x="30" y="54" width="16" height="16" rx="3"/><rect x="54" y="54" width="16" height="16" rx="3"/></svg>
+        <h4>Calculadora</h4>
+        <p>El cálculo ocurre dentro de la casa, no aparte.</p>
+      </div>
+      <div class="piece">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 30 L24 72 C24 80 34 80 34 72 L66 72 C66 80 76 80 76 72 L76 30"/></svg>
+        <h4>Escritura</h4>
+        <p>La base enrollada — el documento notarial final.</p>
+      </div>
+    </div>
+
+    <h3 class="sub" style="margin-top:40px">Espacio de protección y tamaño mínimo</h3>
+    <div class="clearspace">
+      <div class="grid"><svg><use href="#mark"/></svg></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--text-paper-muted);margin:0 0 28px">Deja siempre un margen libre alrededor del logo equivalente a la altura del tejado (la línea punteada). No coloques texto ni otros elementos dentro de ese margen.</p>
+
+    <div class="min-size-row">
+      <div class="item"><svg width="40" height="40"><use href="#mark"/></svg><div class="px">40px · mínimo en pantalla</div></div>
+      <div class="item"><svg width="24" height="24"><use href="#mark"/></svg><div class="px">24px · mínimo absoluto</div></div>
+      <div class="item"><svg width="16" height="16"><use href="#mark"/></svg><div class="px">16px · favicon</div></div>
+    </div>
+
+    <h3 class="sub" style="margin-top:40px">Qué no hacer</h3>
+    <div class="dont-grid">
+      <div class="dont stretch"><svg><use href="#mark"/></svg><div class="lbl">No deformar</div></div>
+      <div class="dont wrongcolor"><svg><use href="#mark"/></svg><div class="lbl">No recolorear fuera de la paleta</div></div>
+      <div class="dont busy"><svg><use href="#mark"/></svg><div class="lbl">No usar sobre fondos con patrón</div></div>
+      <div class="dont tiny"><svg><use href="#mark"/></svg><div class="lbl">No reducir bajo 16px</div></div>
+    </div>
+  </section>
+
+  <!-- ============ COLOR ============ -->
+  <section class="block" id="color">
+    <h2>Color</h2>
+    <p class="lede">Tinta y papel: fondos oscuros para el cálculo, tonos cálidos de papel para la confianza. El oro es el único acento — no compite con nada más.</p>
+
+    <div class="swatch-group">
+      <h3 class="sub">Tinta (fondos oscuros)</h3>
+      <div class="swatch-row">
+        <div class="swatch"><div class="fill" style="background:#0E1512"></div><div class="info"><div class="name">Ink 950</div><div class="hex">#0E1512</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#14201B"></div><div class="info"><div class="name">Ink 900</div><div class="hex">#14201B</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#1F2F27"></div><div class="info"><div class="name">Ink 800</div><div class="hex">#1F2F27</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#2C4238"></div><div class="info"><div class="name">Ink 700</div><div class="hex">#2C4238</div></div></div>
+      </div>
+    </div>
+
+    <div class="swatch-group">
+      <h3 class="sub">Papel (fondos claros)</h3>
+      <div class="swatch-row">
+        <div class="swatch"><div class="fill" style="background:#FCF9F1;border-bottom:1px solid var(--line-paper)"></div><div class="info"><div class="name">Paper 50</div><div class="hex">#FCF9F1</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#F7F1E4"></div><div class="info"><div class="name">Paper 100</div><div class="hex">#F7F1E4</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#EEE4CD"></div><div class="info"><div class="name">Paper 200</div><div class="hex">#EEE4CD</div></div></div>
+      </div>
+    </div>
+
+    <div class="swatch-group">
+      <h3 class="sub">Acento y semántica</h3>
+      <div class="swatch-row">
+        <div class="swatch"><div class="fill" style="background:#D8AE5E"></div><div class="info"><div class="name">Gold 400 — acento</div><div class="hex">#D8AE5E</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#B8892B"></div><div class="info"><div class="name">Gold 500 — badges</div><div class="hex">#B8892B</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#93413F"></div><div class="info"><div class="name">Burgundy — alerta/ISAI</div><div class="hex">#93413F</div></div></div>
+        <div class="swatch"><div class="fill" style="background:#4C7A5E"></div><div class="info"><div class="name">Sage — éxito/confirmación</div><div class="hex">#4C7A5E</div></div></div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;color:var(--text-paper-muted)">El oro es el único acento de marca. Burgundy y sage son <em>semánticos</em> (alerta y confirmación) — no se usan como decoración.</p>
+  </section>
+
+  <!-- ============ TIPOGRAFÍA ============ -->
+  <section class="block" id="tipografia">
+    <h2>Tipografía</h2>
+    <p class="lede">Tres roles, tres familias. Cada una tiene un trabajo — no se mezclan fuera de su función.</p>
+
+    <div class="type-row">
+      <div class="role"><strong>Fraunces</strong>Display / títulos</div>
+      <div>
+        <div class="specimen-serif">Tu cotización, <em>clara y al instante</em></div>
+        <div class="weights"><span>500 Regular</span><span>600 Semibold</span><span>700 Bold</span><span style="font-style:italic">700 Italic</span></div>
+      </div>
+    </div>
+    <div class="type-row">
+      <div class="role"><strong>IBM Plex Sans</strong>Cuerpo / interfaz</div>
+      <div>
+        <div class="specimen-sans">Estima el ISAI, honorarios notariales, registro y avalúo — con las tarifas oficiales 2026 de tu municipio.</div>
+        <div class="weights"><span>400 Regular</span><span>500 Medium</span><span>600 Semibold</span><span>700 Bold</span></div>
+      </div>
+    </div>
+    <div class="type-row">
+      <div class="role"><strong>IBM Plex Mono</strong>Cifras / datos</div>
+      <div>
+        <div class="specimen-mono">$117,729</div>
+        <div class="weights"><span>Usar siempre para montos, porcentajes y folios — nunca para texto corrido.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VOZ Y TONO ============ -->
+  <section class="block" id="voz">
+    <h2>Voz y tono</h2>
+    <p class="lede">La idea central: una herramienta eficiente que resuelve —y que además conecta con la notaría profesional adecuada a cada caso. No vendemos miedo al gasto; vendemos claridad y velocidad.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card yes">
+        <h4>Así sí</h4>
+        <ul>
+          <li>"Tu cotización, clara y al instante —no en tres días."</li>
+          <li>"Tarifa oficial homologada" (credibilidad, no promesa vacía)</li>
+          <li>Hablar de <em>resolver</em> y <em>conectar con el notario adecuado</em></li>
+          <li>Cifras siempre en tabular/mono, nunca aproximadas sin decir "estimado"</li>
+        </ul>
+      </div>
+      <div class="voice-card no">
+        <h4>Así no</h4>
+        <ul>
+          <li>Lenguaje de miedo ("¡no te dejes sorprender!")</li>
+          <li>Jerga interna ("backend", "webhook", "base de datos")</li>
+          <li>Superlativos sin respaldo ("el mejor", "el más rápido de México")</li>
+          <li>Prometer asesoría legal — es una calculadora informativa</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APLICADO ============ -->
+  <section class="block" id="aplicado">
+    <h2>Aplicado</h2>
+    <p class="lede">Cómo se ve el sistema completo en contexto real del producto.</p>
+
+    <h3 class="sub">Barra de navegación</h3>
+    <div class="applied-nav">
+      <div class="applied-brand">
+        <div class="applied-mark"><svg><use href="#mark"/></svg></div>
+        <div><div class="applied-name">Cotiza Escritura</div><span class="applied-tag">Jalisco · 2026</span></div>
+      </div>
+      <div class="applied-cta">Hablar con un asesor</div>
+    </div>
+
+    <h3 class="sub">Insignias de campo (mismo lenguaje visual)</h3>
+    <div class="applied-row" style="margin-bottom:28px">
+      <div class="applied-badge"><span class="ic"><svg><use href="#ic-house"/></svg></span><span>¿Con hipoteca?</span></div>
+      <div class="applied-badge"><span class="ic" style="background:var(--gold-400)"><svg style="width:15px;height:15px"><use href="#mark"/></svg></span><span>Tu estimación: $117,729</span></div>
+    </div>
+
+    <h3 class="sub">Botón de WhatsApp</h3>
+    <div class="applied-wa"><svg><use href="#ic-wa"/></svg> Escríbenos</div>
+  </section>
+
+</div>
+
+<footer>Guía de marca · Cotiza Escritura · uso interno del proyecto</footer>
+</body>
+</html>
