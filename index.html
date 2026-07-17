@@ -559,9 +559,13 @@ body{ touch-action:manipulation; }
     animation:goldSheen 1.5s ease-out 1.05s 1 both;
     /* la itálica de Fraunces sobresale de la caja del texto y background-clip:text
        la recorta; el padding amplía el área pintada y el margen negativo lo compensa
-       para no mover el layout */
-    padding:.08em .12em;
-    margin:-.08em -.12em;
+       para no mover el layout. box-decoration-break:clone aplica ese padding a CADA
+       renglón cuando la frase se parte en dos líneas (sin él, la letra final del
+       primer renglón —la "l" de "al"— queda sin margen y se ve mocha) */
+    padding:.1em .15em;
+    margin:-.1em -.15em;
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
   }
 }
 @keyframes goldSheen{ from{ background-position:130% 0; } to{ background-position:-30% 0; } }
