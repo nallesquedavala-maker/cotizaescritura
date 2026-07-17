@@ -557,6 +557,11 @@ body{ touch-action:manipulation; }
     -webkit-background-clip:text; background-clip:text;
     -webkit-text-fill-color:transparent; color:transparent;
     animation:goldSheen 1.5s ease-out 1.05s 1 both;
+    /* la itálica de Fraunces sobresale de la caja del texto y background-clip:text
+       la recorta; el padding amplía el área pintada y el margen negativo lo compensa
+       para no mover el layout */
+    padding:.08em .12em;
+    margin:-.08em -.12em;
   }
 }
 @keyframes goldSheen{ from{ background-position:130% 0; } to{ background-position:-30% 0; } }
